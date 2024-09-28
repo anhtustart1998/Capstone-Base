@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+    .dropdown {
+        @apply hidden absolute left-0 top-full bg-white dark:bg-blacksection shadow-5 rounded-md p-2.5 w-max;
+    }
+    
+    .dropdown li {
+        @apply block;
+    }
+    
+    .dropdown li a {
+        @apply text-body hover:text-primary block py-2 px-5;
+    }
+
+    .sectionHead{
+        @apply mx-auto max-w-1390 text-center px-4 md:px-8 xl:px-0
+    }
+    
+    .sectionTitle{
+        @apply font-semibold text-3xl xl:text-title-xl text-black dark:text-white md:w-4/5 xl:w-1/2 mx-auto mb-4.5
+    }
+    
+    .sectionSubtitle{
+        @apply mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]
+    }
+}
+
+@layer base {
+    body {
+      @apply font-inter font-normal text-regular text-body relative z-1;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-outfit;
+    }
+  }
+
+
+
+
+.dark .dark\:bg-blacksection {
+    @apply bg-gray-900;
+}
+
+#header.sticky {
+    @apply bg-white dark:bg-black shadow py-4 transition duration-100;
+}
+
+/* Ensure the correct icon is displayed based on the current theme */
+.dark #theme-toggle-light-icon {
+    display: block;
+}
+
+.dark #theme-toggle-dark-icon {
+    display: none;
+}
+
+#theme-toggle-light-icon {
+    display: none;
+}
+
+#theme-toggle-dark-icon {
+    display: block;
+}
