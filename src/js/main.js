@@ -143,6 +143,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Scroll to Top
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+function toggleScrollToTopButton() {
+  if (window.pageYOffset > 50) {
+    scrollToTopBtn.classList.remove("hidden");
+    scrollToTopBtn.classList.add("flex");
+  } else {
+    scrollToTopBtn.classList.remove("flex");
+    scrollToTopBtn.classList.add("hidden");
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+window.addEventListener("scroll", toggleScrollToTopButton);
+
 // Scroll Reveal
 window.sr = ScrollReveal({
   distance: "60px",
