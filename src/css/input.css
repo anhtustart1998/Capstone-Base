@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* #navbar-dropdown li{
+    position: relative;
+}
+#dropdownNavbar ul{
+    position: absolute;
+    opacity: 0;
+    left: -20px;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+    width: 250px;
+    
+} */
+/* #a:hover #dropdownDelay ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+} */
+
+/* Dark Mode */
+.check__box{
+    @apply absolute top-1 p-3 opacity-0
+}
+.sun{
+    @apply absolute cursor-pointer
+}
